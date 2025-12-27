@@ -1,0 +1,1 @@
+using System.Collections.Generic;public class Query{public IEnumerable<string> ChatRooms()=>new[]{"general","random"};}
