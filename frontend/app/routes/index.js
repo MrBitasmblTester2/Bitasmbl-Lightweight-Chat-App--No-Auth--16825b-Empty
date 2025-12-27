@@ -1,0 +1,1 @@
+import Route from '@ember/routing/route';import {inject as service} from '@ember/service';export default class IndexRoute extends Route{@service graphql;async model(){let r=await this.graphql.query('{ chatRooms }');return r.data.chatRooms;}}
