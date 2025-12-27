@@ -1,0 +1,1 @@
+var b=WebApplication.CreateBuilder(args);var s=b.Services;s.AddSignalR();s.AddGraphQLServer().AddQueryType(d=>{});var a=b.Build();a.MapHub<ChatHub>("/chatHub");a.MapGraphQL("/graphql");a.Run();
