@@ -1,0 +1,1 @@
+using Microsoft.AspNetCore.SignalR;public class ChatHub:Hub{public Task JoinRoom(string r){return Groups.AddToGroupAsync(Context.ConnectionId,r);}public Task SendMessage(string r,string u,string m){return Clients.Group(r).SendAsync("ReceiveMessage",r,u,m,DateTime.UtcNow);}}
