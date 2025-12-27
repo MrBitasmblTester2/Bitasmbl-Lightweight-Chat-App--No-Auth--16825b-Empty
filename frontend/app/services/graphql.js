@@ -1,0 +1,1 @@
+import Service from '@ember/service';export default class GraphqlService extends Service{async query(q,v){let r=await fetch('/graphql',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q,variables:v})});return r.json();}}
